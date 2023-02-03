@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Uber{
+            constructor(name,pickup,drop){
+                this.name=name;
+                this.pickup=pickup;
+                this.drop=drop;
+            }
+          getRate(){
+            var basefee=5;
+            var dest=["Adyar","Anna nagar","Mylapore","Paris corner","Tambaram"]
+            var rates=[100,120,140,160,180]
+            if(dest.includes(this.drop)){
+            var i=dest.indexOf(this.drop)
+            var finalrate=rates[i]*basefee;
+            console.log(`Hello ${this.name},your Final fare will be Rs.${finalrate}.`)}
+            else
+            {console.log(`Hello ${this.name},Sorry! Service is not available for the given location.`)}
+          }
+        }
+
+        var p1=new Uber("Ram","Porur","Anna nagar")
+        var p2=new Uber("Priya","KK Nagar","Ramapuram")
+        var p3=new Uber("Shri","Krishna Nagar","Adyar")
+        var p4=new Uber("Kavin","Guindy","Tambaram")
+        var p5=new Uber("Oviya","Velechery","Poonamalle")
+        p1.getRate();
+        p2.getRate();
+        p3.getRate();
+        p4.getRate();
+        p5.getRate();
+
+
+    </script>
+</body>
+</html>
